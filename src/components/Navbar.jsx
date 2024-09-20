@@ -8,33 +8,33 @@ export const NavBar = () => {
       <li className="navbar__item pl-10">
         <NavLink
           className="text-left underline text-blue-600 hover:text-purple-700"
-          to={"/allrocks"}
+          to={"/"}
         >
-          All Rocks
+          Home
         </NavLink>
       </li>
-      <li className="navbar__item">
+      <li className="navbar__item pl-10">
         <NavLink
           className="text-left underline text-blue-600 hover:text-purple-700"
-          to={"/create"}
+          to={"/allgames"}
         >
-          Collect a Rock
+          All Games
         </NavLink>
       </li>
-      <li className="navbar__item">
+      <li className="navbar__item pl-10">
         <NavLink
           className="text-left underline text-blue-600 hover:text-purple-700"
-          to={"/mine"}
+          to={"/mygames"}
         >
-          My Rocks
+          My Games
         </NavLink>
       </li>
-      {localStorage.getItem("rock_token") !== null ? (
+      {localStorage.getItem("rater_token") !== null ? (
         <li className="navbar__item">
           <button
             className="underline text-blue-600 hover:text-purple-700"
             onClick={() => {
-              localStorage.removeItem("rock_token");
+              localStorage.removeItem("rater_token");
               navigate("/login");
             }}
           >
